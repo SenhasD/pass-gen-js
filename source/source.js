@@ -9,7 +9,7 @@ let ageIn = document.getElementById('age').value;
 let favIn;
 let secureTongle = false;
 
-// function for displaying error and debug messages
+// function for displaying error and debug messages AKA parser
 function call(query) {
 	document.getElementById('LOG_text').textContent = query;
 	console.log("DEBUG " + query);
@@ -22,7 +22,7 @@ function moreSecure() {
 		if (opt === "yes") {
 			secureTongle = true;
 			favIn = prompt("Enter something you like anything");
-			call("Parsing user data: \nUsername: " + username + "\nNumber: " + ageIn + "\nTongles: Secure mode: " + secureTongle);
+			call("Parsed");
 			genPass(username, ageIn, favIn, secureTongle);
 			break;
 		} else if (opt === "no") {
@@ -48,6 +48,15 @@ function Random(rep) {
 
 function genPass(username, ageIn, favIn, secureTongle) {
 	const result = Random(ageIn);
-	alert(result);
+	alert(result);	
+	var store = {
+		UserData: {
+			Name: username,
+			Number: ageIn, 
+			Fav: favIn },
+		Settings: {
+			Secure_mode: secureTongle },
+	};
+	console.log(store);
 };
 
