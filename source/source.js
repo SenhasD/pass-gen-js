@@ -41,7 +41,8 @@ function Random(rep) {
 	let tmp = 0;
 	tmp = tmp + nums.length + special.length;
 	tmp *= pi*rep;
-	return tmp;
+	ranNum = Math.floor(tmp/3);
+	return ranNum;
 };
 
 
