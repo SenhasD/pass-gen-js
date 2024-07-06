@@ -22,6 +22,7 @@ function moreSecure() {
 		if (opt === "yes") {
 			secureTongle = true;
 			favIn = prompt("Enter something you like anything");
+			call("Parsing user data: \nUsername: " + username + "\nNumber: " + ageIn + "\nTongles: Secure mode: " + secureTongle);
 			genPass(username, ageIn, favIn, secureTongle);
 			break;
 		} else if (opt === "no") {
@@ -36,16 +37,16 @@ function moreSecure() {
 };
 
 function Random(rep) {
+	const pi = 3.14159265359;
+	let tmp = 0;
+	tmp = tmp + nums.length + special.length;
+	tmp *= pi*rep;
+	return tmp;
 };
 
 
 function genPass(username, ageIn, favIn, secureTongle) {
-	if (secureTongle === true) {
-		call("Loaded options with advanced mode");
-	} else if (secureTongle === false) {
-		call("Loaded options without advanced mode");
-	} else {
-		call("Error during checking if user enabled advanced mode");
-	};
+	const result = Random(ageIn);
+	alert(result);
 };
 
