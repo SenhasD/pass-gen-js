@@ -1,7 +1,7 @@
 # TODO list
 
 - [x] Some work with the GUI/CSS
-- [] fix advanced mode function not working problem
+- ~~[]fix advanced mode function not working problem~~
 - [] implement a password generating algorithm
 - [x] implement function to display logs and debug messages
 - [] provide multiple options for users when entering the data
