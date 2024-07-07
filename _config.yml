@@ -1,4 +1,27 @@
 title: My GitHub Pages Site
 description: A simple description of my site.
-theme: jekyll-theme-hyde
+theme: minima
+
+# Optional settings
+markdown: kramdown
+highlighter: rouge
+
+# URL settings
+baseurl: "/repository-name" # If your site is not at the root of the domain
+url: "https://username.github.io"
+
+# Author settings
+author:
+  name: Your Name
+  email: your-email@example.com
+
+# Social media links
+social:
+  twitter: your_twitter_handle
+  github: your_github_handle
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
