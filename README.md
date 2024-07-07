@@ -27,9 +27,9 @@ __Clone the git__<br>
 _Through https_<br>
 ```git clone https://github.com/SenhasD/pass-gen-js.git```<br> 
 _Through SSH_<br>
-```git clone git@github.com:SenhasD/pass-gen-js.git```
-__Build__
-_Through npm_
-```npm start build```
-__Run__
+```git clone git@github.com:SenhasD/pass-gen-js.git```<br>
+__Build__<br>
+_Through npm_<br>
+```npm start build```<br>
+__Run__<br>
 Executable is builded into the dist folder in the cloned directory
