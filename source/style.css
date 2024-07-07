@@ -64,10 +64,4 @@ input:focus, textarea:focus, select:focus {
   border-radius: 10px;
 }
 
-.header, .footer {
-  background-color: #007BFF;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
 
