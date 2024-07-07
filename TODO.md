@@ -9,6 +9,11 @@
 - [] provide multiple options for users when entering the data
 - [] multiple password generating algorithms to work simultaneously
 - [] method to calculate password vulnerability
+- [] add Caesar Cipher
+- [] add Vigenère Cipher
+- [] add Base64 Encoding
+- [] XOR Cipher
+- [] add ability to choose algorithm method using radio buttons
 
 ## Bugs to be fixed
 
@@ -17,13 +22,10 @@
 - [x] fix the random number generator
 - [x] fixed not parsing userdata
 - [x] Error when normal submit calling function. Failed to fetch data
-- [] add Caesar Cipher
-- [] add Vigenère Cipher
-- [] add Base64 Encoding
-- [] XOR Cipher
-- [] add ability to choose algorithm method using radio buttons
+- [] fix javascript prompt() not supported in electron
 
 ## Wish list
+
 _Things that might someday happen_
 - [x] Port project to electron or react
 - [] Port css to tailwind CSS
