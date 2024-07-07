@@ -1,0 +1,16 @@
+{
+  "name": "pass-gen",
+  "version": "1.0.0",
+  "description": "Password generator in vanilla javascript ( html and css for structure of course )<br> Complete newbie to javascript so large amounts of questionable problems is excepted<br> Just builded this to understand about javascript better.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.1.0"
+  }
+}
