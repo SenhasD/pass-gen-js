@@ -16,3 +16,4 @@
 - [x] fix submit with normal settings doesn't do anything
 - [x] fix the random number generator
 - [x] fixed not parsing userdata
+- [] Error when normal submit calling function. Failed to fetch data
