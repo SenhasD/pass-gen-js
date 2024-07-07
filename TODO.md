@@ -22,3 +22,8 @@
 - [] add Base64 Encoding
 - [] XOR Cipher
 - [] add ability to choose algorithm method using radio buttons
+
+## Wish list
+_Things that might someday happen_
+- [] Port project to electron or react
+- [] Port css to tailwind CSS
