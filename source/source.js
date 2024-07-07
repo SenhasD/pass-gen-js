@@ -50,6 +50,7 @@ function Random(rep) {
 
 // parsing data without secure mode enabled
 function normalParser() {
+	secureTongle = false;
 	call("Parsed");
 	username = document.getElementById('username').value;
 	ageIn = document.getElementById('age').value;
@@ -58,15 +59,21 @@ function normalParser() {
 
 // generating the password
 function genPass(username, ageIn, favIn, secureTongle) {
-	const result = Random(ageIn);
-	call("ID generated: " + result[0][2]);	
+	ranNum = Random(ageIn);
+	let tmp = Math.trunc(ranNum);
+	ranNum = tmp.toString();
+	let ID = Number(ranNum.slice(0, 2));
+	call("ID generated: " + Math.trunc(ID));	
 	var store = {
 		UserData: {
 			Name: username,
 			Number: ageIn, 
 			Fav: favIn },
 		Settings: {
-			Secure_mode: secureTongle },
+			Secure_mode: secureTongle,
+			Algorithms: ["Caesar Cipher", "Vigenère Cipher", "Base64 Encoding", "XOR Cipher"] },
 	};
 	console.log(store);
+	const settings = Object.values(store.Settings);
+	console.log("Settings: " + settings);
 };
