@@ -1,21 +1,10 @@
 title: SenhasD | Password generator in javascript
 description: A simple vanilla javascript password generator.
 theme: minima
-
-# Optional settings
 markdown: kramdown
 highlighter: rouge
-
-# URL settings
 baseurl: "/" 
 url: "https://SenhasD.github.io"
-
-# Author settings
-author:
-  name: Senhas Diwan
-  email: senhasdiwan@gmail.com
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
