@@ -25,5 +25,5 @@
 
 ## Wish list
 _Things that might someday happen_
-- [] Port project to electron or react
+- [x] Port project to electron or react
 - [] Port css to tailwind CSS

@@ -1,16 +1,47 @@
 {
   "name": "pass-gen",
   "version": "1.0.0",
-  "description": "Password generator in vanilla javascript ( html and css for structure of course )<br> Complete newbie to javascript so large amounts of questionable problems is excepted<br> Just builded this to understand about javascript better.",
+  "description": "Password generator in vanilla javascript",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --mac --win --linux",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Senhas Diwan",
+    "email": "senhasdiwan@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
-    "electron": "^31.1.0"
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.senhas.passgen",
+    "productName": "SenhasD-gen-pass",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
   }
 }

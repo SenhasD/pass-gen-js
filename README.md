@@ -7,7 +7,7 @@ Just builded this to understand about javascript better.
 
 _Currently_
 
-- None
+- Supports cross platform ( windows, linux and macOS )
 
 _Working on_
 
