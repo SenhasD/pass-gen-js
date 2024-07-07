@@ -8,6 +8,7 @@ Just builded this to understand about javascript better.
 _Currently_
 
 - Supports cross platform ( windows, linux and macOS )
+- Build from source using npm
 
 _Working on_
 
@@ -19,9 +20,16 @@ _Working on_
 Contribution is welcome. Fork the code and make a PR.
 
 # Build from source
-This is javascript should work on any browser. No compilation or building required. Just clone the project and run [index.html](https://github.com/SenhasD/pass-gen-js/blob/master/source/index.html) in browser.<br>
+You can build the package using npm.
+__Dependencies__
+Ensure npm is installed
 __Clone the git__<br>
 _Through https_<br>
 ```git clone https://github.com/SenhasD/pass-gen-js.git```<br> 
 _Through SSH_<br>
 ```git clone git@github.com:SenhasD/pass-gen-js.git```
+__Build__
+_Through npm_
+```npm start build```
+__Run__
+Executable is builded into the dist folder in the cloned directory
