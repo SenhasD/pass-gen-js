@@ -8,7 +8,10 @@ let username;
 let ageIn; 
 let favIn;
 let secureTongle = false;
-const defaults = ["", "", ""];
+const defaults = ["Enter a name or a username for the password to be created", "Enter the password length"];
+let counter = 0;
+let counter2 = 0;
+
 
 // function for displaying error and debug messages AKA parser
 function call(query) {
@@ -16,36 +19,34 @@ function call(query) {
 	console.log("DEBUG " + query);
 };
 
-function restore(opt1, opt2, question, isRestore) {
+function restore(opt1, opt2, question, isRestore, isClear) {
 	document.getElementById('btn1').textContent = opt1;
 	document.getElementById('btn2').textContent = opt2;
 	document.getElementById('bigText').textContent = question;
 	if (isRestore === true) {
-		document.getElementById('btn1').textContent = "";
-		document.getElementById('btn2').textContent = "";
+		document.getElementById('header1').textContent = defaults[0];
+		document.getElementById('header2').textContent = defaults[1];
 		document.getElementById('bigText').textContent = "";
+		document.getElementById('btn1').textContent = "Submit with default settings";
+		document.getElementById('btn2').textContent = "Submit with advanced settings";
+	};
+	if (isClear === true) {
+		document.getElementById('header1').textContent = "";
+		document.getElementById('header2').textContent = "";
 	};
 };
 // calling with parsing of user enabled settings to the password generating function
 function moreSecure() {
-	while (true) {
-		restore("Yes", "No", "Do you want to enable secure mode?", false);
-		if (opt === "yes") {
-			secureTongle = true;
-			favIn = prompt("Enter something you like anything");
-			call("Parsed");
-			username = document.getElementById('username').value;
-			ageIn = document.getElementById('age').value;
-			genPass(username, ageIn, favIn, secureTongle);
-			break;
-		} else if (opt === "no") {
-			secureTongle = false;
-			call("Stopped using secure mode");
-			break;
-		} else {
-			alert("Didn't catch that pls try again");
-			call("User has entered bad prompt when enabling secure mode");
-		};
+	counter++;
+	if (counter === 1) {
+		restore("Yes", "", "Do you want to enable advanced mode?", false, true);
+		document.getElementById('username').remove()
+		document.getElementById('age').remove()
+		document.getElementById('btn2').remove()
+
+	} else if (counter === 2) {
+		restore("", "", "", true, false);
+		counter = 0;
 	};
 };
 
@@ -61,11 +62,22 @@ function Random(rep) {
 
 // parsing data without secure mode enabled
 function normalParser() {
-	secureTongle = false;
-	call("Parsed");
-	username = document.getElementById('username').value;
-	ageIn = document.getElementById('age').value;
-	genPass(username, ageIn, favIn, secureTongle);
+	counter2++;
+	if (counter2 === 1) {
+		secureTongle = false;
+		call("Parsed");
+		username = document.getElementById('username').value;
+		ageIn = document.getElementById('age').value;
+		genPass(username, ageIn, favIn, secureTongle);
+	} else if (counter2 === 2) {
+		secureTongle = true;
+		call("Parsed");
+		username = document.getElementById('username').value;
+		ageIn = document.getElementById('age').value;
+		genPass(username, ageIn, favIn, secureTongle);
+		counter2 = 0;
+	};
+
 };
 
 // generating the password
