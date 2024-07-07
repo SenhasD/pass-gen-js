@@ -15,3 +15,4 @@
 - ~~[] fix parser only sending boolean~~
 - [] fix submit with normal settings doesn't do anything
 - [] fix the random number generator
+- [x] fixed not parsing userdata

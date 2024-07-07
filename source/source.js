@@ -4,8 +4,8 @@ const Lalpha = Ualpha.toLowerCase();
 const nums = "123456789";
 const special = "!@#$%^&*()<>{}[]";
 let ranNum;
-const username = document.getElementById('username').value;
-let ageIn = document.getElementById('age').value;
+let username;
+let ageIn; 
 let favIn;
 let secureTongle = false;
 
@@ -23,6 +23,8 @@ function moreSecure() {
 			secureTongle = true;
 			favIn = prompt("Enter something you like anything");
 			call("Parsed");
+			username = document.getElementById('username').value;
+			ageIn = document.getElementById('age').value;
 			genPass(username, ageIn, favIn, secureTongle);
 			break;
 		} else if (opt === "no") {
