@@ -8,6 +8,7 @@ let username;
 let ageIn; 
 let favIn;
 let secureTongle = false;
+const defaults = ["", "", ""];
 
 // function for displaying error and debug messages AKA parser
 function call(query) {
@@ -15,10 +16,20 @@ function call(query) {
 	console.log("DEBUG " + query);
 };
 
+function restore(opt1, opt2, question, isRestore) {
+	document.getElementById('btn1').textContent = opt1;
+	document.getElementById('btn2').textContent = opt2;
+	document.getElementById('bigText').textContent = question;
+	if (isRestore === true) {
+		document.getElementById('btn1').textContent = "";
+		document.getElementById('btn2').textContent = "";
+		document.getElementById('bigText').textContent = "";
+	};
+};
 // calling with parsing of user enabled settings to the password generating function
 function moreSecure() {
 	while (true) {
-		const opt = prompt("Do you want to make pass more secure? Requires more questions ");
+		restore("Yes", "No", "Do you want to enable secure mode?", false);
 		if (opt === "yes") {
 			secureTongle = true;
 			favIn = prompt("Enter something you like anything");

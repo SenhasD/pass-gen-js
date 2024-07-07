@@ -5,12 +5,13 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="container">
+		<center><h1 id="bigText">...</h1></center>
 		<h4>Enter a name or a username for the password to be created</h4><br>
 		<input id="username" type="text"></input><br>
 		<h4>Enter the password length</h4><br>
 		<input id="age" type="number"></input><br>
-		<center><button onclick="normalParser();">Submit with default settings</button>
-		<button onclick="moreSecure();">Submit with more encryption</button></center>
+		<center><button id="btn1" type="button" onclick="normalParser()">Submit with default settings</button>
+		<button id="btn2" type="button" onclick="moreSecure();">Submit with more encryption</button></center>
 		<br>
 		<p>Log</p>
 		<p id="LOG_text">...</p>
