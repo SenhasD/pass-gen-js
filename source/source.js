@@ -38,6 +38,7 @@ function moreSecure() {
 	};
 };
 
+// creating a unique user id
 function Random(rep) {
 	const pi = 3.14159265359;
 	let tmp = 0;
@@ -47,10 +48,18 @@ function Random(rep) {
 	return ranNum;
 };
 
+// parsing data without secure mode enabled
+function normalParser() {
+	call("Parsed");
+	username = document.getElementById('username').value;
+	ageIn = document.getElementById('age').value;
+	genPass(username, ageIn, favIn, secureTongle);
+};
 
+// generating the password
 function genPass(username, ageIn, favIn, secureTongle) {
 	const result = Random(ageIn);
-	alert(result);	
+	call("ID generated: " + result[0][2]);	
 	var store = {
 		UserData: {
 			Name: username,
@@ -61,4 +70,3 @@ function genPass(username, ageIn, favIn, secureTongle) {
 	};
 	console.log(store);
 };
-
