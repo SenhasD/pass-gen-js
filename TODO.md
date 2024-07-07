@@ -16,4 +16,9 @@
 - [x] fix submit with normal settings doesn't do anything
 - [x] fix the random number generator
 - [x] fixed not parsing userdata
-- [] Error when normal submit calling function. Failed to fetch data
+- [x] Error when normal submit calling function. Failed to fetch data
+- [] add Caesar Cipher
+- [] add Vigenère Cipher
+- [] add Base64 Encoding
+- [] XOR Cipher
+- [] add ability to choose algorithm method using radio buttons
