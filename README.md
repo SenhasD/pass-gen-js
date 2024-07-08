@@ -3,6 +3,8 @@ Password generator in vanilla javascript ( html and css for structure of course 
 Complete newbie to javascript so large amounts of questionable problems is excepted<br>
 Just builded this to understand about javascript better.
 
+__NOTE: Currently discontinued and will not work__
+
 # Features
 
 _Currently_
